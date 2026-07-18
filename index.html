@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XRAYYOU8</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            /* ★ PASTE YOUR BACKGROUND IMAGE URL HERE ★ */
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ccc;
+            font-family: 'Courier New', monospace;
+            padding: 30px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .box {
+            border: 1px solid #2a2a2a;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+            background: rgba(13, 13, 13, 0.88);
+            backdrop-filter: blur(2px);
+        }
+        a {
+            color: #66aacc;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #fff;
+        }
+        .tag {
+            display: inline-block;
+            border: 1px solid #333;
+            padding: 2px 12px;
+            font-size: 13px;
+        }
+        .big {
+            font-size: 26px;
+            font-weight: bold;
+            color: #eee;
+            animation: pulseText 2s ease-in-out infinite;
+        }
+        @keyframes pulseText {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .muted {
+            color: #555;
+            font-size: 13px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #444;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .footer marquee {
+            display: inline-block;
+            width: 100%;
+        }
+        .blink {
+            animation: blink 1.2s step-start infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .lang-logo {
+            height: 20px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 4px;
+            border-radius: 2px;
+        }
+        .lang-item {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .spin {
+            animation: spin 3s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .pulse {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .prompt {
+            color: #66aacc;
+        }
+        .comment {
+            color: #556;
+        }
+        .inline-gif {
+            height: 20px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 4px;
+            border-radius: 2px;
+        }
+        /* typing cursor */
+        .type-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background: #66aacc;
+            animation: blink 1s step-start infinite;
+            vertical-align: text-bottom;
+            margin-left: 2px;
+        }
+        .typewriter {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="big">⏤ XRAYYOU8 ⏤</div>
+        <div style="color:#888; margin-top:2px;">
+            scripter · 
+            <span class="lang-item">
+                <img src="https://www.bing.com/th/id/OGC.e0f487b75402607ceb3245ce23a0dba0?r=0&o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fcdnl.iconscout.com%2flottie%2fpremium%2fthumb%2fpython-logo-animation-download-in-lottie-json-gif-static-svg-file-formats--application-programming-software-computer-development-web-technologies-pack-logos-animations-9717098.gif&ehk=PB8PqcPJiWzqMXvvfEC5Fqso1OfF4qdqeAYWIW9aQJc%3d" class="lang-logo" alt="python"> Python
+            </span> ·
+            <span class="lang-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="lang-logo spin" alt="html"> HTML
+            </span> ·
+            <span class="lang-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="lang-logo pulse" alt="js"> JS
+            </span> ·
+            <span class="lang-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" class="lang-logo spin" alt="lua"> Lua
+            </span>
+            <span style="color:#555; font-size:12px; margin-left:4px;">// mostly lua</span>
+        </div>
+        <div style="margin-top:6px;">
+            <span class="tag">#0033</span>
+            <span class="tag" style="margin-left:6px;">🌙</span>
+            <span class="tag" style="margin-left:6px;">⚡</span>
+        </div>
+        <div style="margin-top:8px; font-size:13px; color:#666;">
+            <span class="prompt">$</span> <span class="blink">▌</span> <span style="color:#66aacc;" id="typing-text"></span><span class="type-cursor"></span>
+        </div>
+    </div>
+
+    <div class="box">
+        <div style="font-weight:bold; margin-bottom:6px;">// links</div>
+        <div style="line-height:2;">
+            <span class="prompt">></span>
+            <img src="https://www.bing.com/th/id/OGC.547D51674C3ABF1F124CB725992928559D21AA13?r=0&o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia.tenor.com%2frLTHcGoEwfgAAAAM%2foctacat-github.gif&ehk=f7SiJ%2bhDut0fEvxeT813i%2bh6dKKOtftpOrZEGwLLMD4%3d" class="inline-gif" alt="github"> <a href="https://github.com/intel200155-cpu">github (kinda active)</a><br>
+            <span class="prompt">></span>
+            <img src="https://www.bing.com/th/id/OGC.547D51674C3ABF1F124CB725992928559D21AA13?r=0&o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia.tenor.com%2frLTHcGoEwfgAAAAM%2foctacat-github.gif&ehk=f7SiJ%2bhDut0fEvxeT813i%2bh6dKKOtftpOrZEGwLLMD4%3d" class="inline-gif" alt="discord"> <a href="https://discord.com/users/nyxxxsm">discord (nyxxxsm)</a><br>
+            <span class="prompt">></span>
+            <img src="https://www.bing.com/th/id/OGC.2de0d2b671baa148f7e5c759bb4f6667?r=0&o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia.tenor.com%2fWhj4rbZKrdcAAAAM%2froblos.gif&ehk=s1Yt%2fpt3Y6TsyxJA2QbXHSgO58Bf7fqE%2fD%2bf8W5xB9s%3d" class="inline-gif" alt="roblox"> <a href="https://www.roblox.com/users/10369140266/profile">roblox (XRAYYOU8)</a><br>
+            <span class="prompt">></span>
+            <img src="https://www.bing.com/th/id/OGC.547D51674C3ABF1F124CB725992928559D21AA13?r=0&o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia.tenor.com%2frLTHcGoEwfgAAAAM%2foctacat-github.gif&ehk=f7SiJ%2bhDut0fEvxeT813i%2bh6dKKOtftpOrZEGwLLMD4%3d" class="inline-gif" alt="pastebin"> <a href="https://pastebin.com/u/intelthereal">pastebin (lua snippets)</a><br>
+            <span class="prompt">></span>
+            <img src="https://www.bing.com/th/id/OGC.9d098d0497a455c295ec25292b27b506?r=0&o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia.tenor.com%2fqO1MsYjgL7UAAAAM%2ftake-my-money-credit-card-meme.gif&ehk=WAADN57IltnZqIEwRH1mjBBdpcf3d4q%2fQDwOGw4GcgI%3d" class="inline-gif" alt="cashapp"> <a href="https://cash.app/$swagfi">cash app ($swagfi)</a> <span class="comment">// donations welcome</span>
+        </div>
+    </div>
+
+    <div class="box">
+        <div style="font-weight:bold; margin-bottom:4px;">// roblox</div>
+        <div>XRAYYOU8 · id: 10369140266</div>
+        <div class="muted">account age: 180d · premium: false</div>
+        <div class="muted" style="margin-top:4px; color:#444;">// i swear i'm not 12</div>
+    </div>
+
+    <div class="box">
+        <div style="font-weight:bold; margin-bottom:4px;">// cash app</div>
+        <div style="display:inline-block; border:1px solid #2a4a2a; padding:2px 16px; background:#111;">
+            $swagfi
+        </div>
+        <div class="muted" style="margin-top:4px;">// if you're feeling generous</div>
+    </div>
+
+    <div class="box" style="border-color:#2a2a3a;">
+        <div style="display:flex; justify-content:space-between;">
+            <span><span class="prompt">$</span> <span style="color:#66aacc;">./build.sh</span> <span style="color:#555; font-size:13px;">// again</span></span>
+            <span class="muted">2026</span>
+        </div>
+        <div class="muted" style="margin-top:4px;">
+            <span class="comment">// todo: fix css, add more langs, sleep</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <marquee behavior="scroll" direction="left" scrollamount="3">
+            made by XRAYYOU8 · discord.gg/HzTjtX7Sy7 · if it breaks, it's a feature
+        </marquee>
+    </div>
+
+    <script>
+        // typing effect
+        const phrases = [
+            'cat /dev/urandom',
+            'watching logs',
+            'breaking stuff',
+            'building something',
+            'debugging life'
+        ];
+        let idx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        const el = document.getElementById('typing-text');
+
+        function type() {
+            const current = phrases[idx];
+            if (isDeleting) {
+                el.textContent = current.substring(0, charIdx--);
+                if (charIdx < 0) {
+                    isDeleting = false;
+                    idx = (idx + 1) % phrases.length;
+                    setTimeout(type, 400);
+                    return;
+                }
+                setTimeout(type, 60);
+            } else {
+                el.textContent = current.substring(0, charIdx++);
+                if (charIdx > current.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1500);
+                    return;
+                }
+                setTimeout(type, 100);
+            }
+        }
+        type();
+    </script>
+
+</body>
+</html>
